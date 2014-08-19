@@ -65,6 +65,9 @@ public class MailboxConfigurationBeanFactoryPostProcessor implements BeanFactory
             } else if (provider.equalsIgnoreCase("hbase")) {
                 mailbox = "hbase-mailboxmanager";
                 subscription = "hbase-subscriptionManager";
+            } else if (provider.equalsIgnoreCase("cassandra")) {
+                mailbox = "cassandra-mailboxmanager";
+                subscription = "cassandra-subscriptionManager";
             }
 
             if (mailbox == null)
